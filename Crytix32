@@ -1,0 +1,304 @@
+ index.html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Crytix32 — игровой сайт для зрителей со всего мира. Minecraft, игры, стримы и видео.">
+  <meta name="robots" content="index, follow">
+  <title>Crytix32 — Gaming Worldwide</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #090909;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 12px;
+      background: #111;
+      border-bottom: 1px solid #292929;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      padding: 7px;
+    }
+
+    header a:hover { color: #ff4545; }
+
+    .language {
+      background: #202020;
+      color: white;
+      border: 1px solid #555;
+      border-radius: 8px;
+      padding: 9px;
+    }
+
+    .hero {
+      min-height: 430px;
+      padding: 55px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(ellipse, #541010, #170909 48%, #090909 80%);
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border: 3px solid #ff3030;
+      border-radius: 25px;
+      display: grid;
+      place-items: center;
+      font-size: 55px;
+      background: #161616;
+      box-shadow: 0 0 30px #e21b1b55;
+    }
+
+    h1 {
+      font-size: clamp(38px, 9vw, 66px);
+      margin: 18px 0 5px;
+    }
+
+    h1 span { color: #ff3030; }
+
+    p {
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e52626;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover { background: #a91515; }
+
+    .secondary {
+      background: #222;
+      border: 1px solid #444;
+    }
+
+    section {
+      padding: 30px 18px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    h2 {
+      border-left: 4px solid #ff3030;
+      padding-left: 12px;
+    }
+
+    .panel {
+      background: #141414;
+      border: 1px solid #292929;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 14px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: #888;
+      border-top: 1px solid #222;
+    }
+
+    @media (max-width: 480px) {
+      header { gap: 4px; }
+      header a { font-size: 14px; }
+      .hero { min-height: 390px; }
+      .btn { padding: 12px 14px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="#about" data-i="aboutNav">Обо мне</a>
+    <a href="#schedule" data-i="scheduleNav">Расписание</a>
+    <a href="#videos" data-i="videosNav">Видео</a>
+    <a href="#socials" data-i="socialsNav">Соцсети</a>
+
+    <select class="language" id="language"
+      aria-label="Choose language">
+      <option value="ru">🇷🇺 Русский</option>
+      <option value="uk">🇺🇦 Українська</option>
+      <option value="en">🇬🇧 English</option>
+    </select>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="avatar" aria-label="Gaming avatar">🔥</div>
+
+      <h1><span>Crytix</span>32</h1>
+      <p>GAMING • MINECRAFT • STREAMS • ANIME</p>
+      <p data-i="welcome">
+        Добро пожаловать на мой сайт! Зрители со всего мира!
+      </p>
+
+      <div class="buttons">
+        <a class="btn" href="#socials" data-i="mySocials">
+          Мои соцсети
+        </a>
+        <a class="btn secondary" href="#videos" data-i="myVideos">
+          Мои видео
+        </a>
+      </div>
+    </div>
+
+    <section id="about">
+      <h2 data-i="aboutTitle">👋 Обо мне</h2>
+      <div class="panel">
+        <p data-i="aboutText">
+          Я Crytix32! Здесь мои игры, видео, стримы и новости.
+          Сайт для зрителей из разных стран.
+        </p>
+      </div>
+    </section>
+
+    <section id="schedule">
+      <h2 data-i="scheduleTitle">📅 Расписание стримов</h2>
+      <div class="panel">
+        <p data-i="scheduleText">
+          Понедельник — пятница: выходные.<br>
+          Суббота и воскресенье — стримы.
+        </p>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2 data-i="videosTitle">🎬 Мои видео</h2>
+      <div class="panel">
+        <p data-i="videosText">
+          Игровые видео и записи стримов.
+        </p>
+        <a class="btn"
+          href="https://www.youtube.com/@Criscas-p8j"
+          target="_blank" rel="noopener noreferrer">
+          YouTube
+        </a>
+      </div>
+    </section>
+
+    <section id="socials">
+      <h2 data-i="socialsTitle">🌍 Мои соцсети</h2>
+      <div class="buttons">
+        <a class="btn"
+          href="https://www.twitch.tv/crytix32"
+          target="_blank" rel="noopener noreferrer">Twitch</a>
+
+        <a class="btn"
+          href="https://www.youtube.com/@Criscas-p8j"
+          target="_blank" rel="noopener noreferrer">YouTube</a>
+
+        <a class="btn"
+          href="https://www.tiktok.com/@mini_cat53"
+          target="_blank" rel="noopener noreferrer">TikTok</a>
+
+        <a class="btn secondary"
+          href="https://discord.com/"
+          target="_blank" rel="noopener noreferrer">Discord</a>
+
+        <a class="btn secondary"
+          href="https://t.me/Mini_Cat19"
+          target="_blank" rel="noopener noreferrer">Telegram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Crytix32 — Gaming Worldwide 🌍
+  </footer>
+
+  <script>
+    const translations = {
+      ru: {
+        aboutNav: "Обо мне", scheduleNav: "Расписание",
+        videosNav: "Видео", socialsNav: "Соцсети",
+        welcome: "Добро пожаловать на мой сайт! Зрители со всего мира!",
+        mySocials: "Мои соцсети", myVideos: "Мои видео",
+        aboutTitle: "👋 Обо мне",
+        aboutText: "Я Crytix32! Здесь мои игры, видео, стримы и новости. Сайт для зрителей из разных стран.",
+        scheduleTitle: "📅 Расписание стримов",
+        scheduleText: "Понедельник — пятница: выходные. Суббота и воскресенье — стримы.",
+        videosTitle: "🎬 Мои видео",
+        videosText: "Игровые видео и записи стримов.",
+        socialsTitle: "🌍 Мои соцсети"
+      },
+      uk: {
+        aboutNav: "Про мене", scheduleNav: "Розклад",
+        videosNav: "Відео", socialsNav: "Соцмережі",
+        welcome: "Ласкаво просимо на мій сайт! Глядачі з усього світу!",
+        mySocials: "Мої соцмережі", myVideos: "Мої відео",
+        aboutTitle: "👋 Про мене",
+        aboutText: "Я Crytix32! Тут мої ігри, відео, стріми та новини для глядачів із різних країн.",
+        scheduleTitle: "📅 Розклад стрімів",
+        scheduleText: "Понеділок — п’ятниця: вихідні. Субота та неділя — стріми.",
+        videosTitle: "🎬 Мої відео",
+        videosText: "Ігрові відео та записи стрімів.",
+        socialsTitle: "🌍 Мої соцмережі"
+      },
+      en: {
+        aboutNav: "About", scheduleNav: "Schedule",
+        videosNav: "Videos", socialsNav: "Socials",
+        welcome: "Welcome to my website! Viewers from all around the world!",
+        mySocials: "My socials", myVideos: "My videos",
+        aboutTitle: "👋 About me",
+        aboutText: "I'm Crytix32! Find my games, videos, streams and news here. Welcome to viewers from every country.",
+        scheduleTitle: "📅 Stream schedule",
+        scheduleText: "Monday–Friday: days off. Saturday and Sunday: streams.",
+        videosTitle: "🎬 My videos",
+        videosText: "Gaming videos and stream recordings.",
+        socialsTitle: "🌍 My socials"
+      }
+    };
+
+    const languageSelect = document.getElementById("language");
+
+    languageSelect.addEventListener("change", function () {
+      const lang = translations[this.value];
+
+      document.documentElement.lang = this.value;
+
+      document.querySelectorAll("[data-i]").forEach(function (element) {
+        const key = element.dataset.i;
+        if (lang[key]) {
+          element.textContent = lang[key];
+        }
+      });
+    });
+  </script>
+</body>
+</html>
